@@ -1,5 +1,7 @@
 # build.log.sugarshin.net
 
+Builder for https://github.com/sugarshin/log.sugarshin.net/
+
 ## Setup
 
 ```sh
