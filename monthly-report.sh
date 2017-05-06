@@ -17,5 +17,5 @@ git add --all
 git commit -m "$TITLE"
 git push origin HEAD:$BRANCH
 cd -
-npm run create-pull-request -- -b $BRANCH -t $TITLE
+npm run create-pull-request -- -b $BRANCH -t "$TITLE"
 npm run merge-pull-request -- -b $BRANCH

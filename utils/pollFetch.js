@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 
 const pollFetch = (url, options, comparator, timeout = 10000) => {
-  let = timerID
+  let timerID
   return new Promise((resolve, reject) => {
     const f = () => {
       fetch(url, options)
@@ -21,8 +21,9 @@ const pollFetch = (url, options, comparator, timeout = 10000) => {
         reject(new Error(`${url} polling failed`))
       })
     }
+
     f()
-  }
+  })
 }
 
 module.exports = pollFetch

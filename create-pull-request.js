@@ -19,13 +19,8 @@ fetch(
     body: JSON.stringify({ title, head: branch, base: 'master' })
   }
 )
-.then(res => {
-  console.log('res', res)
-  console.log('JSON.stringify(res)', JSON.stringify(res))
-  return res.json()
-})
+.then(res => res.json())
 .then(json => {
-  console.log(`json ${JSON.stringify(json)}`)
   console.log(`Successfully ${json.html_url}`)
 })
 .catch(err => {

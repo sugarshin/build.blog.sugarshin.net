@@ -32,7 +32,7 @@ fetch(
   number = json.number
   return pollFetch(
     `https://api.github.com/repos/sugarshin/log.sugarshin.net/pulls/${number}`,
-    Object.assign({}, baseOpts)
+    Object.assign({}, baseOpts),
     res => res.mergeable === true,
     ms('1m')
   )
