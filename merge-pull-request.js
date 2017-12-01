@@ -11,7 +11,7 @@ if (!branch) {
 
 const baseOpts = {
   method: 'GET',
-  timeout: 10000,
+  timeout: 30000,
   headers: {
     Authorization: `token ${process.env.GITHUB_ACCESS_TOKEN}`,
   },
@@ -28,12 +28,12 @@ fetch(
   )
 )
 .then(res => res.json())
-.then(json => {
-  number = json.number
+.then(pullRequests => {
+  number = pullRequests.find(p => p.head.ref === branch).number
   return pollFetch(
     `https://api.github.com/repos/sugarshin/log.sugarshin.net/pulls/${number}`,
     Object.assign({}, baseOpts),
-    res => res.mergeable === true,
+    res => res.mergeable === true && res.mergeable_state === 'clean',
     ms('1m')
   )
 })

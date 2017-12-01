@@ -3,16 +3,16 @@
 set -eu
 
 DIR=log.sugarshin.net
-NOW=$(date '+%F')
-BRANCH=$NOW-monthly-report
-TITLE="Monthly report $NOW"
+MONTH=$(date '+%Y%m')
+BRANCH=$MONTH$(date '+%d-%I%M')-monthly-report
+TITLE="Monthly report $MONTH"
 
-[ -d $DIR ] || git clone git@github.com:sugarshin/$DIR.git $DIR
+[ -d $DIR ] || git clone --depth=1 git@github.com:sugarshin/$DIR.git $DIR
 cd $DIR
 git checkout -b $BRANCH || git checkout $BRANCH
-git pull origin $BRANCH || true
+git pull --depth=1 origin $BRANCH || true
 yarn
-npm run mr
+npm run mr -- -p 31 -u minutes
 git add --all
 git commit -m "$TITLE"
 git push origin HEAD:$BRANCH
