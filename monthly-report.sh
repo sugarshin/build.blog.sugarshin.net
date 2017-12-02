@@ -12,7 +12,7 @@ cd $DIR
 git checkout -b $BRANCH || git checkout $BRANCH
 git pull --depth=1 origin $BRANCH || true
 yarn
-npm run mr -- -p 31 -u minutes
+npm run mr -- -p 31 -u minutes -n $CIRCLE_USERNAME -U $CIRCLE_BUILD_URL
 git add --all
 git commit -m "$TITLE"
 git push origin HEAD:$BRANCH
