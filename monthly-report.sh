@@ -2,7 +2,7 @@
 
 set -eu
 
-DIR=log.sugarshin.net
+DIR=blog.sugarshin.net
 MONTH=$(date '+%Y%m')
 BRANCH=$MONTH$(date '+%d-%I%M')-monthly-report
 TITLE="Monthly report $MONTH"

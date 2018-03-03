@@ -40,5 +40,5 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "monthly-report" ]; then
               /bin/bash monthly-report.sh
-              curl -XPOST -d '{"text": "Successfully monthly report published to log.sugarshin.net"}' $SLACK_WEBHOOK_URL
+              curl -XPOST -d '{"text": "Successfully monthly report published to blog.sugarshin.net"}' $SLACK_WEBHOOK_URL
             fi

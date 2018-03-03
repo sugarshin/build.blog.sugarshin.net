@@ -20,7 +20,7 @@ const baseOpts = {
 let number
 
 fetch(
-  `https://api.github.com/repos/sugarshin/log.sugarshin.net/pulls`,
+  `https://api.github.com/repos/sugarshin/blog.sugarshin.net/pulls`,
   Object.assign(
     {},
     baseOpts,
@@ -31,7 +31,7 @@ fetch(
 .then(pullRequests => {
   number = pullRequests.find(p => p.head.ref === branch).number
   return pollFetch(
-    `https://api.github.com/repos/sugarshin/log.sugarshin.net/pulls/${number}`,
+    `https://api.github.com/repos/sugarshin/blog.sugarshin.net/pulls/${number}`,
     Object.assign({}, baseOpts),
     res => res.mergeable === true && res.mergeable_state === 'clean',
     ms('1m')
@@ -39,7 +39,7 @@ fetch(
 })
 .then(res => {
   return fetch(
-    `https://api.github.com/repos/sugarshin/log.sugarshin.net/pulls/${number}/merge`,
+    `https://api.github.com/repos/sugarshin/blog.sugarshin.net/pulls/${number}/merge`,
     Object.assign(
       {},
       baseOpts,
