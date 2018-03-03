@@ -1,6 +1,6 @@
-# build.log.sugarshin.net
+# build.blog.sugarshin.net
 
-Builder for https://github.com/sugarshin/log.sugarshin.net/
+Builder for https://github.com/sugarshin/blog.sugarshin.net/
 
 ## Setup
 
@@ -9,7 +9,7 @@ cp .env{.example,}
 vim .env
 ```
 
-https://github.com/sugarshin/build.log.sugarshin.net/blob/master/.env.example
+https://github.com/sugarshin/build.blog.sugarshin.net/blob/master/.env.example
 
 ## License
 

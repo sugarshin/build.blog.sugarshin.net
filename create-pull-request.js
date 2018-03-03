@@ -9,7 +9,7 @@ if (!branch || !title) {
 }
 
 fetch(
-  `https://api.github.com/repos/sugarshin/log.sugarshin.net/pulls`,
+  `https://api.github.com/repos/sugarshin/blog.sugarshin.net/pulls`,
   {
     method: 'POST',
     timeout: 10000,

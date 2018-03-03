@@ -1,8 +1,8 @@
 {
-  "name": "build.log.sugarshin.net",
+  "name": "build.blog.sugarshin.net",
   "version": "1.0.0",
   "private": true,
-  "description": "Builder for log.sugarshin.net",
+  "description": "Builder for blog.sugarshin.net",
   "scripts": {
     "create-pull-request": "node create-pull-request",
     "merge-pull-request": "node merge-pull-request",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sugarshin/build.log.sugarshin.net.git"
+    "url": "git+https://github.com/sugarshin/build.blog.sugarshin.net.git"
   },
   "author": "sugarshin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sugarshin/build.log.sugarshin.net/issues"
+    "url": "https://github.com/sugarshin/build.blog.sugarshin.net/issues"
   },
-  "homepage": "https://github.com/sugarshin/build.log.sugarshin.net#readme",
+  "homepage": "https://github.com/sugarshin/build.blog.sugarshin.net#readme",
   "dependencies": {
     "minimist": "^1.2.0",
     "ms": "^2.1.1",
