@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/sugarshin/build.blog.sugarshin.net#readme",
   "dependencies": {
-    "minimist": "^1.2.0",
-    "ms": "^2.1.1",
-    "node-fetch": "^1.7.3"
+    "minimist": "1.2.0",
+    "ms": "2.1.1",
+    "node-fetch": "1.7.3"
   }
 }
