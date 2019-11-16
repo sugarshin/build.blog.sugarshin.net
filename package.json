@@ -13,7 +13,7 @@
     "url": "git+https://github.com/sugarshin/build.blog.sugarshin.net.git"
   },
   "engines": {
-    "node": "12.4.0"
+    "node": "12.6.0"
   },
   "author": "sugarshin",
   "license": "MIT",
