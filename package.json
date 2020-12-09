@@ -23,7 +23,7 @@
   "homepage": "https://github.com/sugarshin/build.blog.sugarshin.net#readme",
   "dependencies": {
     "minimist": "1.2.0",
-    "ms": "2.1.2",
+    "ms": "2.1.3",
     "node-fetch": "1.7.3"
   }
 }
