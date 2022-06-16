@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/workspace
     docker:
-      - image: cimg/node:12.22.12
+      - image: cimg/node:18.4.0
     environment:
       TZ: /usr/share/zoneinfo/Asia/Tokyo
     steps:
