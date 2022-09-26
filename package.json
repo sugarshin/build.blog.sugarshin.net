@@ -5,15 +5,11 @@
   "description": "Builder for blog.sugarshin.net",
   "scripts": {
     "create-pull-request": "node create-pull-request",
-    "merge-pull-request": "node merge-pull-request",
-    "test": "echo \"Error: no test specified\""
+    "merge-pull-request": "node merge-pull-request"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sugarshin/build.blog.sugarshin.net.git"
-  },
-  "engines": {
-    "node": "12.22.12"
   },
   "author": "sugarshin",
   "license": "MIT",
