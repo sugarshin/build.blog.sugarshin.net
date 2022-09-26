@@ -9,10 +9,9 @@ workflows:
               only:
                 - main
     jobs:
-      - build
-
+      - monthly-report
 jobs:
-  build:
+  monthly-report:
     docker:
       - image: sugarshin/cimg-base-nvm:2.0.0
     steps:
@@ -23,8 +22,10 @@ jobs:
             echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
             echo 'source "$NVM_DIR/nvm.sh" --no-use' >> $BASH_ENV
       - run:
-          name: Install amd use specific verion nodejs
+          name: Install and use specific verion nodejs
           command: nvm install
+      - run: sed -i -e 's/ --no-use//' $BASH_ENV
+      - run: npm install --global yarn
       - run:
           name: System information
           command: |
