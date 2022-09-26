@@ -21,7 +21,7 @@ echo "npm:     $(npm -v)"
 echo "Yarn:    $(yarn --version)"
 
 yarn
-npm run mr -- -p 31 -u minutes -n "$NAME" -U "$CIRCLE_BUILD_URL"
+npm run mr -- -p 570 -u minutes -n "$NAME" -U "$CIRCLE_BUILD_URL"
 
 git config --global user.name 'CircleCI'
 git config --global user.email 's+circleci@sugarshin.net'
