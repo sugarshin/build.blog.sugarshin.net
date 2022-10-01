@@ -52,7 +52,7 @@ jobs:
             git config --global user.name 'CircleCI'
             git config --global user.email 's+circleci@sugarshin.net'
       - run:
-          command: /bin/bash monthly-report.sh
+          command: ./monthly-report.sh
       - run:
           name: Notify
           command: |

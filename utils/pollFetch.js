@@ -12,6 +12,7 @@ const pollFetch = (url, options, comparator, timeout = 10000) => {
           resolve(json)
         } else {
           timerID = setTimeout(() => {
+            console.log('[INFO] retry...')
             f()
           }, timeout)
         }
