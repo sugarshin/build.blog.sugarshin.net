@@ -1,15 +1,15 @@
 version: 2.1
 workflows:
-  Build monthly report:
-    triggers:
-      - schedule:
-          cron: "0 0 1 * *" # At 00:00 on day-of-month 1. (UTC+0900)
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
-      - monthly-report
+  # Build monthly report:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 0 1 * *" # At 00:00 on day-of-month 1. (UTC+0900)
+  #         filters:
+  #           branches:
+  #             only:
+  #               - main
+  #   jobs:
+  #     - monthly-report
 jobs:
   monthly-report:
     docker:
